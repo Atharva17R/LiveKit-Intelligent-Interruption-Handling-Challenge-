@@ -14,7 +14,7 @@ from livekit.agents import (
 
 from .errors import AnamException
 from .log import logger
-from .types import PersonaConfig
+from .event_types import PersonaConfig
 
 DEFAULT_API_URL = "https://api.anam.ai"
 

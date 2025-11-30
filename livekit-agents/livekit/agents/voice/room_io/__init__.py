@@ -5,7 +5,7 @@ from ._output import (
     _ParticipantTranscriptionOutput,
 )
 from .room_io import RoomIO
-from .types import (
+from .event_types import (
     AudioInputOptions,
     AudioOutputOptions,
     RoomInputOptions,

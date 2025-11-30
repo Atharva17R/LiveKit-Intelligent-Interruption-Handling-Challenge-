@@ -40,7 +40,7 @@ from livekit.protocol import agent, models
 from .log import logger
 from .telemetry import _upload_session_report, trace_types, tracer
 from .telemetry.traces import _setup_cloud_tracer
-from .types import NotGivenOr
+from ..event_types import NotGivenOr
 from .utils import http_context, is_given, wait_for_participant
 from .utils.misc import is_cloud
 

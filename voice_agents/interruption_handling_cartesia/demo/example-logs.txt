@@ -1,0 +1,4 @@
+{"decision": "ignore_event", "reason": "all-filler", "text": "hmm", "ts": 1700000000100}
+{"decision": "interrupt_event", "reason": "interruptKeyword:wait", "text": "yeah wait a second", "ts": 1700000001500}
+{"decision": "interrupt_event", "reason": "agent-idle-forward", "text": "yeah", "ts": 1700000002500}
+{"decision": "interrupt_event", "reason": "interruptKeyword:stop", "text": "stop", "ts": 1700000003300}

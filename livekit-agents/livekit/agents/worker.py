@@ -51,7 +51,7 @@ from .job import (
 )
 from .log import DEV_LEVEL, logger
 from .plugin import Plugin
-from .types import NOT_GIVEN, NotGivenOr
+from .event_types import NOT_GIVEN, NotGivenOr
 from .utils import http_server, is_given
 from .utils.hw import get_cpu_monitor
 from .version import __version__

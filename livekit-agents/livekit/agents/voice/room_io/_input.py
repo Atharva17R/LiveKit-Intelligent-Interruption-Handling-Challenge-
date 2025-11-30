@@ -14,7 +14,7 @@ from ...log import logger
 from ...utils import aio, log_exceptions
 from ..io import AudioInput, VideoInput
 from ._pre_connect_audio import PreConnectAudioHandler
-from .types import NoiseCancellationParams, NoiseCancellationSelector
+from ..event_types import NoiseCancellationParams, NoiseCancellationSelector
 
 T = TypeVar("T", bound=Union[rtc.AudioFrame, rtc.VideoFrame])
 

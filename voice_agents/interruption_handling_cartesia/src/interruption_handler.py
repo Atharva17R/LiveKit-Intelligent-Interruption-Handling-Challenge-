@@ -6,7 +6,6 @@ from typing import Callable, List, Optional
 from .config import DEFAULT_CONFIG
 from .utils_text import normalize_text, tokenize
 from .utils_keywords import is_all_filler, contains_interrupt_keyword, contains_meaningful_token
-# NEW
 from .event_types import SttEvent, VadEvent, DecisionPayload
 
 class InterruptionHandler:
@@ -91,6 +90,7 @@ class InterruptionHandler:
         # fallback
         self.enter_delay_window(e)
 
+## delay window
     def enter_delay_window(self, e: SttEvent):
         with self.delay_lock:
             self.emit_decision('delay_event', 'enter-delay-window', e.get("text", normalize_text(e.get("text",""))), e.get("ts"))
@@ -99,7 +99,8 @@ class InterruptionHandler:
             ms = int(self.config["delay_window_ms"])
             self.delay_timer = Timer(ms/1000.0, self._on_delay_timeout, args=(e,))
             self.delay_timer.start()
-
+            
+## timeout logic
     def _on_delay_timeout(self, orig_event: SttEvent):
         with self.delay_lock:
             now_ms = int(time.time()*1000)

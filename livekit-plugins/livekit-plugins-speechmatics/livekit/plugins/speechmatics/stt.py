@@ -45,7 +45,7 @@ from speechmatics.rt import (
 )
 
 from .log import logger
-from .types import (
+from .event_types import (
     AdditionalVocabEntry,
     AudioSettings,
     DiarizationFocusMode,
